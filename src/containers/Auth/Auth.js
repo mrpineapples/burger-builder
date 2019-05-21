@@ -80,8 +80,10 @@ class Auth extends Component {
       })
     }
 
+    formElementsArr.sort((a, b) => a.id > b.id)
+
     let form = formElementsArr.map(formElement => (
-      <Input 
+      <Input
         key={formElement.id}
         elementType={formElement.config.elementType}
         elementConfig={formElement.config.elementConfig}
